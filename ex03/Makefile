@@ -1,7 +1,7 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
-NAME = brainz
-SRC= Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+NAME = useless_violence
+SRC= Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
 

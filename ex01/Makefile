@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
-NAME = brainz.cpp
+NAME = horde
 SRC= Zombie.cpp zombieHorde.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
