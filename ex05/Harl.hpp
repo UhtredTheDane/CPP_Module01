@@ -1,7 +1,7 @@
 #ifndef HARL_HPP
 # define HARL_HPP
 
-#include <iosteam>
+#include <iostream>
 
 class Harl
 {
@@ -19,5 +19,5 @@ class Harl
         void    info(void);
         void    warning(void);
         void    error(void);
-}
+};
 #endif
