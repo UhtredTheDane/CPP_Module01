@@ -23,7 +23,7 @@ class HumanA
 		HumanA(std::string name, Weapon &weapon);
 		
 		void	attack(void);
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon &weapon);
 
 	private:
 

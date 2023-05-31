@@ -23,14 +23,14 @@ class HumanB
 		HumanB(std::string name);
 
 		void	attack(void);
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon *weapon);
 
 	private:
 
 		HumanB(void);
 
 		std::string	name;
-		Weapon		weapon;
+		Weapon		*weapon;
 
 };
 #endif
