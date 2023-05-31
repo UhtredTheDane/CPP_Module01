@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:52:34 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 15:32:18 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/31 20:05:17 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class HumanB
 		HumanB(std::string name);
 
 		void	attack(void);
-		void	setWeapon(Weapon *weapon);
+		void	setWeapon(Weapon &weapon);
 
 	private:
 
