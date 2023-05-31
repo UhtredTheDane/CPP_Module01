@@ -1,20 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/31 11:53:55 by agengemb          #+#    #+#             */
+/*   Updated: 2023/05/31 16:09:47 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef WEAPON_HPP
 # define WEAPON_HPP
 
+#include <string>
+
 class Weapon
 {
-    public:
-        
-        Weapon(std:string type);
+	public:
 
-        std::string getType(void);
-        void        setTypes(std::string type);
+		Weapon(void);
+		Weapon(std::string type);
 
-    private:
+		const std::string&	getType(void);
+		void			setType(std::string type);
 
-        Weapon(void);
-        
-        std::string type;
+	private:
+	
+		std::string	type;
 
-}
+};
 #endif

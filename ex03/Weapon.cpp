@@ -1,21 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/31 11:52:41 by agengemb          #+#    #+#             */
+/*   Updated: 2023/05/31 16:08:55 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Weapon.hpp"
 
-Weapon::Weapon() : type(0)
+Weapon::Weapon(void)
 {
 
 }
 
-Weapon::Weapon(std:string type)
+Weapon::Weapon(std::string type)
 {
-    this->type = type;
+	this->type = type;
 }
 
-std::string Weapon::getType(void)
+const std::string&	Weapon::getType(void)
 {
-    return (type);
+	return (type);
 }
 
-void        Weapon::setTypes(std::string type)
+void        Weapon::setType(std::string type)
 {
-    this->type = type;
+	this->type = type;
 }
