@@ -13,7 +13,7 @@ class Harl
 
     private:
 
-        void (Harl::* what_complain) (void);
+        void (Harl::*what_complain) (void);
 
         void    debug(void);
         void    info(void);

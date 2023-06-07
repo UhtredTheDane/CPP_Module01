@@ -1,6 +1,6 @@
 #include "Harl.hpp"
 
-Harl::Harl(void) : what_complain(0)
+Harl::Harl(void)
 {
 
 }
@@ -27,21 +27,13 @@ void    Harl::error(void)
 
 void    Harl::complain(std::string level)
 {
-	switch(level)
-	{
-		case "debug":
-    			what_complain = & Harl::debug;
-			break;	
-		case "info":
-    			what_complain = & Harl::info;
-			break;
-		case "warning":
-    			what_complain = & Harl::warning;
-			break;
-		default:
-    			what_complain = & Harl::error;
+	std::string level_types[] = {"debug", "info", "warning", "error"};
+	void	(Harl::*levels_ptr[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
-			
-	}
-    this->*what_complain();
+	for (int i = 0; i < 4; ++i)
+	{
+		if (level == level_types[i])
+			what_complain = levels_ptr[i];
+	}	
+   	(this->*what_complain)();
 }
