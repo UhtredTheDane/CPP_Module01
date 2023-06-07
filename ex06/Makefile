@@ -1,6 +1,6 @@
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -MMD
-NAME = harl_filter
+NAME = harl2.0
 SRC= Harl.cpp main.cpp
 OBJ= $(SRC:.cpp=.o)
 DEP= ${OBJ:.o=.d}
