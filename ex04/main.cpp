@@ -1,6 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/12 17:27:09 by agengemb          #+#    #+#             */
+/*   Updated: 2023/06/12 17:42:08 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <fstream>
+
+int	error_manager(char **argv, int num)
+{
+	if (num == 1)
+		std::cout << "Le fichier " << argv[1] << " est introuvable." << std::endl;	
+	else
+		std::cout << "Erreur avec le fichier " << argv[2] << "." << std::endl;
+	return (num);
+}
 
 void	find_and_replace(char **argv, std::ifstream& in_file, std::ofstream& out_file)
 {
@@ -20,12 +41,12 @@ void	find_and_replace(char **argv, std::ifstream& in_file, std::ofstream& out_fi
 			line.insert(pos, s2);
 			pos += s2.length();
 		}
-			out_file << line << std::endl;
+		out_file << line << std::endl;
 	}
 	out_file.close();
 }
 
-void	ft_sed(char **argv)
+int	ft_sed(char **argv)
 {
 	std::string	new_name;
 	std::ifstream    in_file;
@@ -38,9 +59,14 @@ void	ft_sed(char **argv)
 		new_name.append(".replace");
 		out_file.open(new_name.c_str());
 		if (out_file)
-			find_and_replace(in_file, out_file);
+			find_and_replace(argv, in_file, out_file);
+		else
+			return (error_manager(argv, 2));
 		in_file.close();
 	}
+	else
+		return (error_manager(argv, 1));
+	return (0);
 }
 
 int main(int argc, char **argv)
@@ -50,6 +76,5 @@ int main(int argc, char **argv)
 		std::cout << "Usage: ./sed nameFile s1 s2" << std::endl;
 		return (1);
 	}
-	ft_sed(argv);
-	return (0);
+	return (ft_sed(argv));
 }

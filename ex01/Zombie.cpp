@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:22:28 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 11:44:10 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:06:55 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie(void)
 {
-	std::cout << this->name << "retourne à la poussière." << std::endl;
+	std::cout << this->name << " retourne à la poussière." << std::endl;
 }
 
 void    Zombie::set_name(std::string name)

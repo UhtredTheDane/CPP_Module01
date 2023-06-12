@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:52:13 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 20:10:25 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/12 19:04:34 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 class HumanA
 {
 	public:
-		
+
 		HumanA(std::string name, Weapon &weapon);
-		
+
 		void	attack(void);
 		void	setWeapon(Weapon &weapon);
 

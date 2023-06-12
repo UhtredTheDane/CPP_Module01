@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:53:55 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 16:09:47 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/12 19:04:41 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Weapon
 		void			setType(std::string type);
 
 	private:
-	
+
 		std::string	type;
 
 };

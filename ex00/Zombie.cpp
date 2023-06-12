@@ -6,11 +6,16 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:04:07 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 11:23:50 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:54:09 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+
+Zombie::Zombie(void)
+{
+
+}
 
 Zombie::Zombie(std::string name)
 {

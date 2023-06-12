@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:22:29 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/31 11:40:24 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/12 19:05:39 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Zombie
 		Zombie(std::string name);
 		Zombie(void);	
 		~Zombie(void);
-		
+
 		void    set_name(std::string name);
 		void    announce(void);
 
