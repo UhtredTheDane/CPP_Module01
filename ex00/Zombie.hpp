@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:05:16 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/12 15:59:07 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/13 14:41:48 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Zombie
 	private:
 
 		Zombie(void);
+
 		std::string name;
 };
 #endif

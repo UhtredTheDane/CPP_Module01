@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 17:27:09 by agengemb          #+#    #+#             */
-/*   Updated: 2023/06/12 17:42:08 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/06/13 15:05:41 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include <string>
 #include <fstream>
 
-int	error_manager(char **argv, int num)
+int	error_manager(char *fileName, int num)
 {
 	if (num == 1)
-		std::cout << "Le fichier " << argv[1] << " est introuvable." << std::endl;	
+		std::cout << "Le fichier " << fileName << " est introuvable." << std::endl;	
 	else
-		std::cout << "Erreur avec le fichier " << argv[2] << "." << std::endl;
+		std::cout << "Erreur avec le fichier " << fileName << ".replace ." << std::endl;
 	return (num);
 }
 
@@ -61,11 +61,11 @@ int	ft_sed(char **argv)
 		if (out_file)
 			find_and_replace(argv, in_file, out_file);
 		else
-			return (error_manager(argv, 2));
+			return (error_manager(argv[1], 2));
 		in_file.close();
 	}
 	else
-		return (error_manager(argv, 1));
+		return (error_manager(argv[1], 1));
 	return (0);
 }
 
